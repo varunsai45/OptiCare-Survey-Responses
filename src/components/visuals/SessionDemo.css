@@ -1,0 +1,260 @@
+.session {
+  width: 100%;
+}
+
+.session__frame {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #101f33;
+  box-shadow: 0 40px 80px -48px rgba(0, 0, 0, 0.8);
+}
+
+.session__chrome {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.session__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.session__tab {
+  margin-left: 14px;
+  font-size: 0.75rem;
+  color: rgba(237, 242, 246, 0.6);
+  letter-spacing: -0.005em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.session__screen {
+  position: relative;
+  min-height: 380px;
+  padding: var(--s4);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 720px) {
+  .session__screen {
+    min-height: 420px;
+    padding: var(--s5);
+  }
+}
+
+/* --- The "work" behind the notification --------------------------------- */
+
+.session__doc {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 460px;
+}
+
+.session__line {
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.session__line--head {
+  height: 12px;
+  width: 52%;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.session__line--short {
+  width: 72%;
+}
+
+.session__caret {
+  width: 2px;
+  height: 18px;
+  background: var(--accent-bright);
+  animation: session-caret 1.1s steps(1) infinite;
+}
+
+@keyframes session-caret {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* --- Session meter ------------------------------------------------------- */
+
+.session__meter {
+  position: absolute;
+  top: var(--s3);
+  right: var(--s3);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  transition: border-color 600ms var(--ease), background-color 600ms var(--ease);
+}
+
+.session__meter.is-hot {
+  border-color: rgba(127, 212, 208, 0.5);
+}
+
+.session__meter-label {
+  font-size: 0.625rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(237, 242, 246, 0.6);
+}
+
+.session__meter-value {
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #edf2f6;
+}
+
+.session__meter.is-hot .session__meter-value {
+  color: var(--accent-bright);
+}
+
+/* On a phone the meter would sit on top of the document lines, so it moves
+   into the flow above them instead of floating. */
+@media (max-width: 560px) {
+  .session__meter {
+    position: static;
+    order: -1;
+    align-self: flex-end;
+    margin-bottom: var(--s3);
+  }
+}
+
+/* --- Notification -------------------------------------------------------- */
+
+.session__toast {
+  margin-top: auto;
+  align-self: flex-end;
+  width: min(100%, 340px);
+  padding: var(--s3);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: #17293f;
+  box-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.7);
+  animation: toast-in 520ms var(--ease-out);
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.98);
+  }
+}
+
+.session__toast-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent-bright);
+}
+
+.session__toast-app {
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(237, 242, 246, 0.6);
+}
+
+.session__toast-title {
+  margin-top: 12px;
+  font-size: 1.0625rem;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: #edf2f6;
+}
+
+.session__toast-copy {
+  margin-top: 6px;
+  font-size: 0.9375rem;
+  color: rgba(237, 242, 246, 0.62);
+}
+
+.session__toast-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: var(--s3);
+}
+
+.session__toast--quiet {
+  border-style: dashed;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.session__replay {
+  margin-top: 10px;
+  background: none;
+  border: 0;
+  padding: 8px 0;
+  min-height: 44px;
+  color: var(--accent-bright);
+  font-size: 0.875rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+/* --- Break + completion -------------------------------------------------- */
+
+.session__activity {
+  flex: 1;
+  display: flex;
+  animation: toast-in 420ms var(--ease-out);
+}
+
+.session__done {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  animation: toast-in 520ms var(--ease-out);
+}
+
+.session__tick {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid rgba(127, 212, 208, 0.5);
+  color: var(--accent-bright);
+}
+
+.session__done-title {
+  font-size: 1.375rem;
+  letter-spacing: -0.03em;
+  color: #edf2f6;
+}
+
+.session__done-copy {
+  font-size: 0.9375rem;
+  color: rgba(237, 242, 246, 0.6);
+  margin-bottom: 8px;
+}
+
+.session__marker {
+  margin-top: var(--s2);
+}

@@ -1,0 +1,18 @@
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: inherit;
+}
+
+.wordmark__mark {
+  flex: none;
+}
+
+.wordmark__text {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.17em;
+  line-height: 1;
+  padding-top: 1px;
+}

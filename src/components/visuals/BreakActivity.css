@@ -1,0 +1,348 @@
+.activity {
+  --act-fg: #edf2f6;
+  --act-muted: rgba(237, 242, 246, 0.6);
+  --act-line: rgba(255, 255, 255, 0.16);
+  --act-accent: var(--accent-bright);
+  color: var(--act-fg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+  width: 100%;
+}
+
+.activity--light {
+  --act-fg: var(--ink);
+  --act-muted: var(--ink-3);
+  --act-line: var(--line);
+  --act-accent: var(--accent);
+}
+
+.activity__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s2);
+}
+
+.activity__name {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--act-muted);
+}
+
+.activity__timer {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  flex: none;
+}
+
+.activity__timer svg {
+  transform: rotate(-90deg);
+}
+
+.activity__timer-track {
+  fill: none;
+  stroke: var(--act-line);
+  stroke-width: 2;
+}
+
+.activity__timer-fill {
+  fill: none;
+  stroke: var(--act-accent);
+  stroke-width: 2;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1000ms linear;
+}
+
+.activity__count {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.activity__instruction {
+  font-size: 1.0625rem;
+  line-height: 1.45;
+  letter-spacing: -0.015em;
+  max-width: 34ch;
+}
+
+.activity__stage {
+  min-height: 210px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--act-line);
+  border-radius: var(--radius-lg);
+  padding: var(--s3);
+}
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s3);
+  width: 100%;
+}
+
+.stage__cue {
+  font-size: 0.875rem;
+  color: var(--act-muted);
+  min-height: 1.4em;
+  text-align: center;
+}
+
+.activity__exit {
+  align-self: flex-start;
+  background: none;
+  border: 0;
+  padding: 10px 2px;
+  min-height: 44px;
+  color: var(--act-muted);
+  font-size: 0.875rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+.activity__exit:hover {
+  color: var(--act-fg);
+}
+
+/* --- Blink --------------------------------------------------------------- */
+
+.blink__ring {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  border: 1px solid var(--act-line);
+  display: grid;
+  place-items: center;
+  transition: transform 2200ms var(--ease), border-color 2200ms var(--ease);
+}
+
+.blink__ring--close {
+  transform: scale(0.72);
+  border-color: var(--act-accent);
+}
+
+.blink__core {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--act-accent);
+  opacity: 0.22;
+  transition: opacity 2200ms var(--ease), transform 2200ms var(--ease);
+}
+
+.blink__ring--close .blink__core {
+  opacity: 0.5;
+  transform: scaleY(0.12);
+}
+
+/* --- Focus --------------------------------------------------------------- */
+
+.focus__field {
+  position: relative;
+  width: 100%;
+  max-width: 260px;
+  height: 140px;
+  display: grid;
+  place-items: center;
+}
+
+.focus__ring,
+.focus__dot {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.focus__ring {
+  border: 1px solid var(--act-line);
+}
+
+.focus__ring--far {
+  width: 132px;
+  height: 132px;
+}
+
+.focus__ring--mid {
+  width: 76px;
+  height: 76px;
+}
+
+.focus__dot {
+  width: 18px;
+  height: 18px;
+  background: var(--act-accent);
+  animation: focus-travel 6s var(--ease) infinite;
+}
+
+@keyframes focus-travel {
+  0%,
+  100% {
+    transform: translateX(-84px) scale(0.55);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateX(84px) scale(1.35);
+    opacity: 1;
+  }
+}
+
+/* --- Colour -------------------------------------------------------------- */
+
+.colour__target {
+  font-size: clamp(1.75rem, 6vw, 2.25rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+.colour__row {
+  display: flex;
+  gap: var(--s2);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.colour__swatch {
+  width: 68px;
+  height: 68px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: transform 180ms var(--ease);
+}
+
+.colour__swatch:hover {
+  transform: translateY(-2px);
+}
+
+.colour__swatch:active {
+  transform: scale(0.96);
+}
+
+/* --- Peripheral ---------------------------------------------------------- */
+
+.periph__field {
+  position: relative;
+  width: 100%;
+  max-width: 260px;
+  height: 128px;
+  border: 1px solid var(--act-line);
+  border-radius: var(--radius);
+}
+
+.periph__centre {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  border-radius: 50%;
+  background: var(--act-muted);
+}
+
+.periph__edge {
+  position: absolute;
+  background: var(--act-accent);
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 260ms var(--ease);
+}
+
+.periph__edge.is-lit {
+  opacity: 1;
+}
+
+.periph__edge--top,
+.periph__edge--bottom {
+  left: 50%;
+  width: 56px;
+  height: 4px;
+  margin-left: -28px;
+}
+
+.periph__edge--top {
+  top: 6px;
+}
+
+.periph__edge--bottom {
+  bottom: 6px;
+}
+
+.periph__edge--left,
+.periph__edge--right {
+  top: 50%;
+  width: 4px;
+  height: 44px;
+  margin-top: -22px;
+}
+
+.periph__edge--left {
+  left: 6px;
+}
+
+.periph__edge--right {
+  right: 6px;
+}
+
+.periph__controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.periph__btn {
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--act-line);
+  background: transparent;
+  color: inherit;
+  font-size: 0.875rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: border-color 160ms var(--ease), background-color 160ms var(--ease);
+}
+
+.periph__btn:hover {
+  border-color: var(--act-accent);
+}
+
+/* --- Reading ------------------------------------------------------------- */
+
+.stage--reading {
+  min-height: 120px;
+  justify-content: center;
+}
+
+.reading__line {
+  font-size: clamp(1.25rem, 4vw, 1.625rem);
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  line-height: 1.35;
+  text-align: center;
+  max-width: 24ch;
+  animation: reading-in 700ms var(--ease-out);
+}
+
+@keyframes reading-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .focus__dot {
+    animation: none;
+  }
+}

@@ -1,0 +1,88 @@
+.showcase {
+  display: grid;
+  gap: var(--s4);
+  margin-top: var(--s6);
+}
+
+@media (min-width: 880px) {
+  .showcase {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: var(--s6);
+    align-items: start;
+  }
+}
+
+.showcase__list {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.showcase__item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 18px 44px 18px 2px;
+  position: relative;
+  cursor: pointer;
+  color: rgba(237, 242, 246, 0.6);
+  transition: color 200ms var(--ease);
+}
+
+.showcase__item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 1px;
+  width: 0;
+  background: var(--accent-bright);
+  transition: width 420ms var(--ease-out);
+}
+
+.showcase__item.is-active::after {
+  width: 100%;
+}
+
+.showcase__item:hover {
+  color: rgba(237, 242, 246, 0.85);
+}
+
+.showcase__item.is-active {
+  color: #edf2f6;
+}
+
+.showcase__item-name {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: -0.022em;
+}
+
+.showcase__item-blurb {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  color: rgba(237, 242, 246, 0.6);
+  max-width: 42ch;
+}
+
+.showcase__panel {
+  /* Reserve the height before the demo mounts, so nothing jumps. */
+  min-height: 372px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.03);
+  padding: var(--s4);
+}
+
+@media (min-width: 880px) {
+  .showcase__panel {
+    position: sticky;
+    top: var(--s5);
+  }
+}

@@ -1,0 +1,130 @@
+.devices {
+  width: 100%;
+}
+
+.devices__svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.devices__desk {
+  stroke: var(--line-strong);
+  stroke-width: 1;
+  opacity: 0;
+  animation: dc-desk 900ms var(--ease-out) 120ms forwards;
+}
+
+.devices__body {
+  fill: var(--surface);
+  stroke: var(--ink);
+  stroke-width: 1.4;
+}
+
+.devices__screen {
+  fill: #f2f4f4;
+  stroke: none;
+}
+
+.devices__content rect {
+  fill: var(--ink-4);
+  opacity: 0.55;
+}
+
+.devices__content .devices__block {
+  fill: var(--accent);
+  opacity: 0.16;
+}
+
+.devices__notch {
+  stroke: var(--ink-4);
+  stroke-width: 1.4;
+  stroke-linecap: round;
+}
+
+.devices__lens {
+  fill: var(--ink-4);
+}
+
+.devices__activity {
+  stroke: var(--line-strong);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.devices__activity-fill {
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+}
+
+.devices__activity-fill--laptop {
+  animation: dc-fill-laptop 2600ms var(--ease-out) 1500ms forwards;
+}
+
+.devices__activity-fill--tablet {
+  animation: dc-fill-tablet 2400ms var(--ease-out) 2000ms forwards;
+}
+
+/* --- Entrances. Each device arrives once, then holds still. -------------- */
+
+.devices__item {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: dc-enter 1000ms var(--ease-out) forwards;
+}
+
+.devices__item--phone {
+  animation-delay: 220ms;
+}
+
+.devices__item--laptop {
+  animation-delay: 520ms;
+}
+
+.devices__item--tablet {
+  animation-delay: 820ms;
+}
+
+@keyframes dc-enter {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes dc-desk {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dc-fill-laptop {
+  to {
+    stroke-dashoffset: 78;
+  }
+}
+
+@keyframes dc-fill-tablet {
+  to {
+    stroke-dashoffset: 216;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .devices__item,
+  .devices__desk {
+    opacity: 1;
+    transform: none;
+  }
+
+  .devices__activity-fill--laptop {
+    stroke-dashoffset: 78;
+  }
+
+  .devices__activity-fill--tablet {
+    stroke-dashoffset: 216;
+  }
+}
