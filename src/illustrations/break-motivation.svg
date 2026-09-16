@@ -1,0 +1,41 @@
+<svg viewBox="0 0 420 170" preserveAspectRatio="xMidYMid meet" fill="none" stroke-linecap="round" stroke-linejoin="round" class="ill-motivation">
+
+  <rect x="160" y="42" width="100" height="42" rx="8" fill="var(--ill-surface, #ffffff)" stroke="var(--ill-line, #10243e)" stroke-width="1.4"/>
+  <circle cx="178" cy="58" r="5" stroke="var(--ill-accent, #0f6f8c)" stroke-width="1.4"/><circle cx="178" cy="58" r="1.7" fill="var(--ill-accent, #0f6f8c)" stroke="none"/>
+  <text class="" x="210" y="62" font-size="12" font-family="inherit" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="var(--ill-line, #10243e)" stroke="none">2h 30m continuous</text>
+  <text class="" x="210" y="78" font-size="13" font-family="inherit" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="var(--ill-muted, #9aabba)" stroke="none">Take 60 seconds?</text>
+  <g class="rays" stroke="var(--ill-muted, #9aabba)" stroke-width="1.1" stroke-dasharray="3 5" opacity="0.8">
+    <path d="M160 62H92M160 74H80v20M260 62h68M260 74h70v20M210 88v22"/>
+  </g>
+  
+  <g class="mot mot-reminder">
+    <circle cx="62" cy="44" r="16" fill="var(--ill-surface, #ffffff)" stroke="var(--ill-muted, #9aabba)" stroke-width="1.25"/>
+    <g transform="translate(62 44)" stroke="var(--ill-accent, #0f6f8c)" stroke-width="1.4"><path d="M-5 4V-1a5 5 0 0 1 10 0v5M-7 4h14M-2 7h4"/></g>
+  </g>
+  
+  <g class="mot mot-tired">
+    <circle cx="62" cy="118" r="16" fill="var(--ill-surface, #ffffff)" stroke="var(--ill-muted, #9aabba)" stroke-width="1.25"/>
+    <g transform="translate(62 118)" stroke="var(--ill-accent, #0f6f8c)" stroke-width="1.4"><path d="M-7 0c2.6-3.4 4.6-5 7-5s4.4 1.6 7 5c-2.6 3.4-4.6 5-7 5s-4.4-1.6-7-5Z"/></g>
+  </g>
+  
+  <g class="mot mot-activity">
+    <circle cx="210" cy="132" r="16" fill="var(--ill-surface, #ffffff)" stroke="var(--ill-muted, #9aabba)" stroke-width="1.25"/>
+    <g transform="translate(210 132)" stroke="var(--ill-accent, #0f6f8c)" stroke-width="1.4"><circle cx="0" cy="0" r="6"/><path d="M-2-3l5 3-5 3z"/></g>
+  </g>
+  
+  <g class="mot mot-schedule">
+    <circle cx="358" cy="44" r="16" fill="var(--ill-surface, #ffffff)" stroke="var(--ill-muted, #9aabba)" stroke-width="1.25"/>
+    <g transform="translate(358 44)" stroke="var(--ill-accent, #0f6f8c)" stroke-width="1.4"><rect x="-6" y="-5" width="12" height="11" rx="1.6"/><path d="M-6-1h12M-3-8v3M3-8v3"/></g>
+  </g>
+  
+  <g class="mot mot-duration">
+    <circle cx="358" cy="118" r="16" fill="var(--ill-surface, #ffffff)" stroke="var(--ill-muted, #9aabba)" stroke-width="1.25"/>
+    <g transform="translate(358 118)" stroke="var(--ill-accent, #0f6f8c)" stroke-width="1.4"><circle cx="0" cy="0" r="6"/><path d="M0-3v3l2.6 1.7"/></g>
+  </g>
+  
+  <g class="mot mot-nothing">
+    <circle cx="286" cy="132" r="16" fill="var(--ill-surface, #ffffff)" stroke="var(--ill-muted, #9aabba)" stroke-width="1.25"/>
+    <g transform="translate(286 132)" stroke="var(--ill-accent, #0f6f8c)" stroke-width="1.4"><path d="M-3-5v10M3-5v10"/></g>
+  </g>
+
+</svg>

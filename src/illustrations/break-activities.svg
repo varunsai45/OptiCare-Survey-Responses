@@ -1,0 +1,39 @@
+<svg viewBox="0 0 420 110" preserveAspectRatio="xMidYMid meet" fill="none" stroke-linecap="round" stroke-linejoin="round" class="ill-activities">
+
+  
+  <g class="act act-blink">
+    <rect x="4" y="28" width="52" height="52" rx="9" fill="var(--ill-surface, #ffffff)" stroke="var(--ill-muted, #9aabba)" stroke-width="1.2"/>
+    <g transform="translate(30 54)" stroke="var(--ill-accent, #0f6f8c)" stroke-width="1.5"><path class="lid" d="M-11 0c4-5.2 7.2-7.6 11-7.6S7 -5.2 11 0c-4 5.2-7.2 7.6-11 7.6S-7 5.2-11 0Z"/><circle cx="0" cy="0" r="3.4"/></g>
+  </g>
+  
+  <g class="act act-focus">
+    <rect x="64" y="28" width="52" height="52" rx="9" fill="var(--ill-surface, #ffffff)" stroke="var(--ill-muted, #9aabba)" stroke-width="1.2"/>
+    <g transform="translate(90 54)" stroke="var(--ill-accent, #0f6f8c)" stroke-width="1.5"><circle cx="0" cy="0" r="10"/><circle class="dot" cx="0" cy="0" r="3.4" fill="var(--ill-accent, #0f6f8c)" stroke="none"/></g>
+  </g>
+  
+  <g class="act act-colour">
+    <rect x="124" y="28" width="52" height="52" rx="9" fill="var(--ill-surface, #ffffff)" stroke="var(--ill-muted, #9aabba)" stroke-width="1.2"/>
+    <g transform="translate(150 54)" stroke="var(--ill-accent, #0f6f8c)" stroke-width="1.5"><rect x="-11" y="-6" width="7" height="12" rx="1.6"/><rect x="-2" y="-6" width="7" height="12" rx="1.6" fill="var(--ill-soft, rgba(15,111,140,0.12))"/><rect x="7" y="-6" width="7" height="12" rx="1.6"/></g>
+  </g>
+  
+  <g class="act act-peripheral">
+    <rect x="184" y="28" width="52" height="52" rx="9" fill="var(--ill-surface, #ffffff)" stroke="var(--ill-muted, #9aabba)" stroke-width="1.2"/>
+    <g transform="translate(210 54)" stroke="var(--ill-accent, #0f6f8c)" stroke-width="1.5"><rect x="-11" y="-8" width="22" height="16" rx="2.4"/><circle cx="0" cy="0" r="1.6"/><path class="edge" d="M-8-5h4M8 5h-4"/></g>
+  </g>
+  
+  <g class="act act-reading">
+    <rect x="244" y="28" width="52" height="52" rx="9" fill="var(--ill-surface, #ffffff)" stroke="var(--ill-muted, #9aabba)" stroke-width="1.2"/>
+    <g transform="translate(270 54)" stroke="var(--ill-accent, #0f6f8c)" stroke-width="1.5"><path d="M-10-6h20M-10 0h16M-10 6h12"/></g>
+  </g>
+  
+  <g class="act act-rest">
+    <rect x="304" y="28" width="52" height="52" rx="9" fill="var(--ill-surface, #ffffff)" stroke="var(--ill-muted, #9aabba)" stroke-width="1.2"/>
+    <g transform="translate(330 54)" stroke="var(--ill-accent, #0f6f8c)" stroke-width="1.5"><path d="M-10 2c4-4 7-6 10-6s6 2 10 6"/><path d="M-6 8h12"/></g>
+  </g>
+  
+  <g class="act act-none">
+    <rect x="364" y="28" width="52" height="52" rx="9" fill="var(--ill-surface, #ffffff)" stroke="var(--ill-muted, #9aabba)" stroke-width="1.2"/>
+    <g transform="translate(390 54)" stroke="var(--ill-accent, #0f6f8c)" stroke-width="1.5"><circle cx="0" cy="0" r="9"/><path d="M-6-6l12 12"/></g>
+  </g>
+
+</svg>

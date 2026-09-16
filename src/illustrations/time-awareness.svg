@@ -1,0 +1,22 @@
+<svg viewBox="0 0 200 130" preserveAspectRatio="xMidYMid meet" fill="none" stroke-linecap="round" stroke-linejoin="round" class="ill-time">
+
+  <circle cx="64" cy="62" r="34" stroke="var(--ill-line, #10243e)" stroke-width="1.6"/>
+  <circle cx="64" cy="62" r="2.2" fill="var(--ill-line, #10243e)" stroke="none"/>
+  <line x1="64" y1="62" x2="64" y2="38" stroke="var(--ill-muted, #9aabba)" stroke-width="1.6"/>
+  <line class="hand" x1="64" y1="62" x2="84" y2="62" stroke="var(--ill-accent, #0f6f8c)" stroke-width="1.8"/>
+  <g stroke="var(--ill-muted, #9aabba)" stroke-width="1.3">
+    <line x1="64" y1="30" x2="64" y2="34"/><line x1="96" y1="62" x2="92" y2="62"/>
+    <line x1="64" y1="94" x2="64" y2="90"/><line x1="32" y1="62" x2="36" y2="62"/>
+  </g>
+  <g class="" transform="translate(140 92) scale(0.9)" stroke="var(--ill-line, #10243e)" stroke-width="1.6">
+    <circle cx="0" cy="-26" r="8.5"/>
+    <path d="M-15 0c0-9 6.7-15 15-15s15 6 15 15"/>
+  </g>
+  <g class="" transform="translate(168 84) scale(0.8)">
+    <rect x="-24" y="-18" width="48" height="32" rx="3" stroke="var(--ill-line, #10243e)" stroke-width="1.6"/>
+    <rect class="glow" x="-20" y="-14" width="40" height="24" rx="2" fill="var(--ill-soft, rgba(15,111,140,0.12))" stroke="none"/>
+    <path d="M-31 19h62l-5-5h-52l-5 5Z" stroke="var(--ill-line, #10243e)" stroke-width="1.6"/>
+  </g>
+  <text class="" x="64" y="118" font-size="11" font-family="inherit" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="var(--ill-muted, #9aabba)" stroke="none">20·60·120 MIN</text>
+
+</svg>

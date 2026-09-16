@@ -1,0 +1,32 @@
+<svg viewBox="0 0 420 160" preserveAspectRatio="xMidYMid meet" fill="none" stroke-linecap="round" stroke-linejoin="round" class="ill-reflection">
+
+  <g class="" transform="translate(90 136) scale(1.25)" stroke="var(--ill-line, #10243e)" stroke-width="1.6">
+    <circle cx="0" cy="-26" r="8.5"/>
+    <path d="M-15 0c0-9 6.7-15 15-15s15 6 15 15"/>
+  </g>
+  <g class="" transform="translate(150 128) scale(0.7)">
+    <rect x="-24" y="-18" width="48" height="32" rx="3" stroke="var(--ill-line, #10243e)" stroke-width="1.6"/>
+    <rect class="glow" x="-20" y="-14" width="40" height="24" rx="2" fill="var(--ill-soft, rgba(15,111,140,0.12))" stroke="none"/>
+    <path d="M-31 19h62l-5-5h-52l-5 5Z" stroke="var(--ill-line, #10243e)" stroke-width="1.6"/>
+  </g>
+  <g stroke="var(--ill-muted, #9aabba)" stroke-width="1.2" fill="none">
+    <circle cx="120" cy="96" r="3"/><circle cx="132" cy="84" r="4.4"/>
+  </g>
+  
+  <g class="bub bub-a">
+    <rect x="142" y="12" width="138" height="26" rx="13" fill="var(--ill-surface, #ffffff)" stroke="var(--ill-muted, #9aabba)" stroke-width="1.2"/>
+    <text class="" x="211" y="29" font-size="13" font-family="inherit" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="var(--ill-muted, #9aabba)" stroke="none">Take more breaks</text>
+  </g>
+  
+  <g class="bub bub-b">
+    <rect x="150" y="46" width="174" height="26" rx="13" fill="var(--ill-surface, #ffffff)" stroke="var(--ill-muted, #9aabba)" stroke-width="1.2"/>
+    <text class="" x="237" y="63" font-size="13" font-family="inherit" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="var(--ill-muted, #9aabba)" stroke="none">Less phone at night</text>
+  </g>
+  
+  <g class="bub bub-c">
+    <rect x="196" y="80" width="180" height="26" rx="13" fill="var(--ill-surface, #ffffff)" stroke="var(--ill-muted, #9aabba)" stroke-width="1.2"/>
+    <text class="" x="286" y="97" font-size="13" font-family="inherit" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="var(--ill-muted, #9aabba)" stroke="none">Stop losing track of time</text>
+  </g>
+  <text class="" x="300" y="140" font-size="13" font-family="inherit" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="var(--ill-muted, #9aabba)" stroke="none">EXAMPLES ONLY</text>
+
+</svg>

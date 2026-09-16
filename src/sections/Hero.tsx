@@ -1,11 +1,45 @@
-import { DeviceComposition } from '../components/visuals/DeviceComposition';
+import { Illustration } from '../components/common/Illustration';
+import { useReveal } from '../hooks/useReveal';
 
 interface HeroProps {
   onStart: () => void;
   resuming: boolean;
 }
 
+/**
+ * What the visitor is about to walk through. It gives the landing page some
+ * weight without a second wall of prose, and it doubles as navigation.
+ */
+const contents = [
+  {
+    n: '01',
+    href: '#problem',
+    title: 'One day. Multiple screens.',
+    body: 'Where screen time actually goes.',
+  },
+  {
+    n: '02',
+    href: '#why-missed',
+    title: 'Why breaks get missed.',
+    body: 'Four hunches we want tested.',
+  },
+  {
+    n: '03',
+    href: '#concept',
+    title: 'The idea we are exploring.',
+    body: 'A nudge, and sixty seconds.',
+  },
+  {
+    n: '04',
+    href: '#research',
+    title: 'Ten questions.',
+    body: 'About two minutes of yours.',
+  },
+];
+
 export function Hero({ onStart, resuming }: HeroProps) {
+  const indexRef = useReveal<HTMLOListElement>(0.15);
+
   return (
     <section className="hero" id="top">
       <div className="wrap hero__grid">
@@ -43,16 +77,31 @@ export function Hero({ onStart, resuming }: HeroProps) {
         </div>
 
         <div className="hero__visual">
-          <DeviceComposition />
+          <Illustration
+            name="landing-devices"
+            alt="A phone, a laptop and a tablet, their screen light rising towards a single open eye above, with a usage bar filling beneath each device."
+            className="ill--hero"
+          />
         </div>
       </div>
 
-      <a className="hero__scroll" href="#problem">
-        <span>Read the problem first</span>
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-          <path d="M12 5v14M6 13l6 6 6-6" />
-        </svg>
-      </a>
+      <div className="wrap">
+        <ol className="hindex reveal" ref={indexRef}>
+          {contents.map((item, i) => (
+            <li
+              className="hindex__item"
+              key={item.n}
+              style={{ '--reveal-delay': `${i * 60}ms` } as React.CSSProperties}
+            >
+              <a className="hindex__link" href={item.href}>
+                <span className="hindex__n tnum">{item.n}</span>
+                <span className="hindex__title">{item.title}</span>
+                <span className="hindex__body">{item.body}</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </div>
     </section>
   );
 }

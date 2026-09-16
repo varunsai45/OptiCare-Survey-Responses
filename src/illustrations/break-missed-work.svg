@@ -1,0 +1,24 @@
+<svg viewBox="0 0 200 130" preserveAspectRatio="xMidYMid meet" fill="none" stroke-linecap="round" stroke-linejoin="round" class="ill-work">
+
+  <g class="" transform="translate(72 92) scale(1)" stroke="var(--ill-line, #10243e)" stroke-width="1.6">
+    <circle cx="0" cy="-26" r="8.5"/>
+    <path d="M-15 0c0-9 6.7-15 15-15s15 6 15 15"/>
+  </g>
+  <g class="" transform="translate(118 82) scale(1)">
+    <rect x="-24" y="-18" width="48" height="32" rx="3" stroke="var(--ill-line, #10243e)" stroke-width="1.6"/>
+    <rect class="glow" x="-20" y="-14" width="40" height="24" rx="2" fill="var(--ill-soft, rgba(15,111,140,0.12))" stroke="none"/>
+    <path d="M-31 19h62l-5-5h-52l-5 5Z" stroke="var(--ill-line, #10243e)" stroke-width="1.6"/>
+  </g>
+  <g class="note">
+    <rect x="118" y="16" width="70" height="30" rx="6" fill="var(--ill-surface, #ffffff)" stroke="var(--ill-line, #10243e)" stroke-width="1.4"/>
+    <circle cx="130" cy="31" r="4" stroke="var(--ill-accent, #0f6f8c)" stroke-width="1.4"/>
+    <line x1="140" y1="26" x2="178" y2="26" stroke="var(--ill-muted, #9aabba)" stroke-width="2.4"/>
+    <line x1="140" y1="35" x2="166" y2="35" stroke="var(--ill-muted, #9aabba)" stroke-width="2.4"/>
+  </g>
+  <g class="keys" stroke="var(--ill-accent, #0f6f8c)" stroke-width="2" opacity="0.9">
+    <line x1="104" y1="104" x2="112" y2="104"/>
+    <line x1="118" y1="104" x2="126" y2="104"/>
+    <line x1="132" y1="104" x2="140" y2="104"/>
+  </g>
+
+</svg>

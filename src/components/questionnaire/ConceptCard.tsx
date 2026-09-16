@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import type { Interstitial } from '../../types';
 import { ExposureChart } from '../visuals/ExposureChart';
 import { Wordmark } from '../common/Wordmark';
+import { Illustration } from '../common/Illustration';
 import { useReducedMotion } from '../../hooks/useReducedMotion';
 
 interface ConceptCardProps {
@@ -33,6 +34,13 @@ function BreakConceptVisual() {
 
   return (
     <div className="conceptviz">
+      <Illustration
+        name="eye-break-notification"
+        alt="A long session reaching two and a half hours, then a notification offering an eye break, then a thirty to sixty second activity, then back to work."
+        tone="dark"
+        className="ill--wide"
+      />
+
       <div className={`conceptviz__timer ${minutes >= 150 ? 'is-hot' : ''}`}>
         <span className="conceptviz__timer-label">Continuous screen session</span>
         <span className="conceptviz__timer-value tnum">

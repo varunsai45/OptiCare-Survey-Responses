@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { questionCount, questionNumber } from '../../data/questions';
+import { questionVisuals } from '../../data/illustrationMap';
 import { useSurvey } from '../../hooks/useSurvey';
 import type { AnswerValue } from '../../types';
+import { Illustration } from '../common/Illustration';
 import { Wordmark } from '../common/Wordmark';
 import { ConceptCard } from './ConceptCard';
 import { OptionList } from './OptionList';
@@ -108,6 +110,7 @@ export function Questionnaire({ onClose }: QuestionnaireProps) {
   const detail = details[question.id] ?? '';
   const index = questionNumber[question.id];
   const submitting = submission.status === 'submitting';
+  const visual = questionVisuals[question.id];
 
   const handleChange = (nextValue: AnswerValue) => {
     setAnswer(question.id, nextValue);
@@ -134,6 +137,17 @@ export function Questionnaire({ onClose }: QuestionnaireProps) {
       <div className="quiz__stage" key={question.id} data-dir={direction}>
         <div className="qscreen">
           <div className="qscreen__body">
+            {visual && (
+              <Illustration
+                name={visual.name}
+                alt={visual.alt}
+                tone="dark"
+                className="ill--band qscreen__visual"
+                state={visual.toState?.(value)}
+                rating={question.type === 'rating' && typeof value === 'number' ? value : undefined}
+              />
+            )}
+
             <h2 className="qscreen__title" tabIndex={-1} ref={headingRef}>
               {question.title}
             </h2>

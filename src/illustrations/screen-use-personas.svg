@@ -1,0 +1,79 @@
+<svg viewBox="0 0 420 170" preserveAspectRatio="xMidYMid meet" fill="none" stroke-linecap="round" stroke-linejoin="round" class="ill-personas">
+
+  
+  <g class="tile tile-studying">
+    <rect x="6" y="6" width="126" height="62" rx="8" fill="var(--ill-surface, #ffffff)" stroke="var(--ill-muted, #9aabba)" stroke-width="1.2"/>
+    <g transform="translate(36 48)"><g class="" transform="translate(0 0) scale(0.62)" stroke="var(--ill-line, #10243e)" stroke-width="1.6">
+    <circle cx="0" cy="-26" r="8.5"/>
+    <path d="M-15 0c0-9 6.7-15 15-15s15 6 15 15"/>
+  </g><path d="M12 -6h16v10H12z" stroke="var(--ill-line, #10243e)" stroke-width="1.4"/></g>
+    <text class="" x="84" y="44" font-size="13" font-family="inherit" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="var(--ill-muted, #9aabba)" stroke="none">STUDY</text>
+  </g>
+  
+  <g class="tile tile-work">
+    <rect x="146" y="6" width="126" height="62" rx="8" fill="var(--ill-surface, #ffffff)" stroke="var(--ill-muted, #9aabba)" stroke-width="1.2"/>
+    <g transform="translate(176 48)"><g class="" transform="translate(0 0) scale(0.62)" stroke="var(--ill-line, #10243e)" stroke-width="1.6">
+    <circle cx="0" cy="-26" r="8.5"/>
+    <path d="M-15 0c0-9 6.7-15 15-15s15 6 15 15"/>
+  </g><g class="" transform="translate(20 -6) scale(0.44)">
+    <rect x="-24" y="-18" width="48" height="32" rx="3" stroke="var(--ill-line, #10243e)" stroke-width="1.6"/>
+    <rect class="glow" x="-20" y="-14" width="40" height="24" rx="2" fill="var(--ill-soft, rgba(15,111,140,0.12))" stroke="none"/>
+    <path d="M-31 19h62l-5-5h-52l-5 5Z" stroke="var(--ill-line, #10243e)" stroke-width="1.6"/>
+  </g></g>
+    <text class="" x="224" y="44" font-size="13" font-family="inherit" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="var(--ill-muted, #9aabba)" stroke="none">WORK</text>
+  </g>
+  
+  <g class="tile tile-gaming">
+    <rect x="286" y="6" width="126" height="62" rx="8" fill="var(--ill-surface, #ffffff)" stroke="var(--ill-muted, #9aabba)" stroke-width="1.2"/>
+    <g transform="translate(316 48)"><g class="" transform="translate(0 0) scale(0.62)" stroke="var(--ill-line, #10243e)" stroke-width="1.6">
+    <circle cx="0" cy="-26" r="8.5"/>
+    <path d="M-15 0c0-9 6.7-15 15-15s15 6 15 15"/>
+  </g><rect x="10" y="-12" width="22" height="14" rx="5" stroke="var(--ill-line, #10243e)" stroke-width="1.4"/><circle cx="16" cy="-5" r="1.6" fill="var(--ill-accent, #0f6f8c)" stroke="none"/></g>
+    <text class="" x="364" y="44" font-size="13" font-family="inherit" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="var(--ill-muted, #9aabba)" stroke="none">GAMING</text>
+  </g>
+  
+  <g class="tile tile-entertainment">
+    <rect x="6" y="84" width="126" height="62" rx="8" fill="var(--ill-surface, #ffffff)" stroke="var(--ill-muted, #9aabba)" stroke-width="1.2"/>
+    <g transform="translate(36 126)"><g class="" transform="translate(0 0) scale(0.62)" stroke="var(--ill-line, #10243e)" stroke-width="1.6">
+    <circle cx="0" cy="-26" r="8.5"/>
+    <path d="M-15 0c0-9 6.7-15 15-15s15 6 15 15"/>
+  </g><g class="" transform="translate(18 -6) scale(0.6)">
+    <rect x="-9" y="-16" width="18" height="32" rx="3.5" stroke="var(--ill-line, #10243e)" stroke-width="1.6"/>
+    <rect class="glow" x="-6" y="-12" width="12" height="21" rx="1.5" fill="var(--ill-soft, rgba(15,111,140,0.12))" stroke="none"/>
+  </g></g>
+    <text class="" x="84" y="122" font-size="13" font-family="inherit" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="var(--ill-muted, #9aabba)" stroke="none">SOCIAL</text>
+  </g>
+  
+  <g class="tile tile-business">
+    <rect x="146" y="84" width="126" height="62" rx="8" fill="var(--ill-surface, #ffffff)" stroke="var(--ill-muted, #9aabba)" stroke-width="1.2"/>
+    <g transform="translate(176 126)"><g class="" transform="translate(0 0) scale(0.62)" stroke="var(--ill-line, #10243e)" stroke-width="1.6">
+    <circle cx="0" cy="-26" r="8.5"/>
+    <path d="M-15 0c0-9 6.7-15 15-15s15 6 15 15"/>
+  </g><g class="" transform="translate(18 -8) scale(0.36)">
+    <rect x="-24" y="-18" width="48" height="32" rx="3" stroke="var(--ill-line, #10243e)" stroke-width="1.6"/>
+    <rect class="glow" x="-20" y="-14" width="40" height="24" rx="2" fill="var(--ill-soft, rgba(15,111,140,0.12))" stroke="none"/>
+    <path d="M-31 19h62l-5-5h-52l-5 5Z" stroke="var(--ill-line, #10243e)" stroke-width="1.6"/>
+  </g><g class="" transform="translate(34 -2) scale(0.44)">
+    <rect x="-9" y="-16" width="18" height="32" rx="3.5" stroke="var(--ill-line, #10243e)" stroke-width="1.6"/>
+    <rect class="glow" x="-6" y="-12" width="12" height="21" rx="1.5" fill="var(--ill-soft, rgba(15,111,140,0.12))" stroke="none"/>
+  </g></g>
+    <text class="" x="224" y="122" font-size="13" font-family="inherit" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="var(--ill-muted, #9aabba)" stroke="none">BUSINESS</text>
+  </g>
+  
+  <g class="tile tile-combination">
+    <rect x="286" y="84" width="126" height="62" rx="8" fill="var(--ill-surface, #ffffff)" stroke="var(--ill-muted, #9aabba)" stroke-width="1.2"/>
+    <g transform="translate(316 126)"><g class="" transform="translate(0 0) scale(0.62)" stroke="var(--ill-line, #10243e)" stroke-width="1.6">
+    <circle cx="0" cy="-26" r="8.5"/>
+    <path d="M-15 0c0-9 6.7-15 15-15s15 6 15 15"/>
+  </g><g class="" transform="translate(16 -8) scale(0.42)">
+    <rect x="-9" y="-16" width="18" height="32" rx="3.5" stroke="var(--ill-line, #10243e)" stroke-width="1.6"/>
+    <rect class="glow" x="-6" y="-12" width="12" height="21" rx="1.5" fill="var(--ill-soft, rgba(15,111,140,0.12))" stroke="none"/>
+  </g><g class="" transform="translate(34 -4) scale(0.34)">
+    <rect x="-24" y="-18" width="48" height="32" rx="3" stroke="var(--ill-line, #10243e)" stroke-width="1.6"/>
+    <rect class="glow" x="-20" y="-14" width="40" height="24" rx="2" fill="var(--ill-soft, rgba(15,111,140,0.12))" stroke="none"/>
+    <path d="M-31 19h62l-5-5h-52l-5 5Z" stroke="var(--ill-line, #10243e)" stroke-width="1.6"/>
+  </g><rect x="44" y="-14" width="9" height="12" rx="2" stroke="var(--ill-line, #10243e)" stroke-width="1.2"/></g>
+    <text class="" x="364" y="122" font-size="13" font-family="inherit" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="var(--ill-muted, #9aabba)" stroke="none">A MIX</text>
+  </g>
+
+</svg>

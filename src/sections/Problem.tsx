@@ -1,9 +1,11 @@
 import { DayTimeline } from '../components/visuals/DayTimeline';
 import { ExposureChart } from '../components/visuals/ExposureChart';
 import { useReveal } from '../hooks/useReveal';
+import { Illustration } from '../components/common/Illustration';
 
 export function Problem() {
   const headRef = useReveal<HTMLDivElement>();
+  const storyRef = useReveal<HTMLDivElement>(0.2);
   const pullRef = useReveal<HTMLDivElement>();
 
   return (
@@ -18,6 +20,14 @@ export function Problem() {
               a working day and an evening — which makes it hard to notice how much of it there
               actually was.
             </p>
+          </div>
+
+          <div className="reveal problem__story" ref={storyRef}>
+            <Illustration
+              name="multi-device-day"
+              alt="One person through a single day: phone in the morning, laptop through work or study, phone again in the afternoon, television in the evening."
+              className="ill--wide"
+            />
           </div>
 
           <DayTimeline />

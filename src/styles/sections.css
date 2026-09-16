@@ -139,43 +139,81 @@
   }
 }
 
-.hero__scroll {
-  display: none;
+
+/* --- What's inside: the index under the hero ----------------------------- */
+
+.hindex {
+  margin-top: var(--s7);
+  padding-top: var(--s3);
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 0;
 }
 
-@media (min-width: 900px) {
-  .hero__scroll {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    position: absolute;
-    left: var(--gutter);
-    bottom: var(--s5);
-    font-size: 0.8125rem;
-    color: var(--ink-3);
-    text-decoration: none;
-    opacity: 0;
-    animation: hero-in 900ms var(--ease-out) 900ms forwards;
-  }
-
-  .hero__scroll:hover {
-    color: var(--ink);
-  }
-
-  .hero__scroll svg {
-    animation: nudge 2.4s var(--ease) infinite;
+@media (min-width: 640px) {
+  .hindex {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-@keyframes nudge {
-  0%,
-  70%,
-  100% {
-    transform: translateY(0);
+@media (min-width: 1000px) {
+  .hindex {
+    grid-template-columns: repeat(4, 1fr);
   }
-  80% {
-    transform: translateY(3px);
+}
+
+.hindex__item {
+  border-bottom: 1px solid var(--line);
+}
+
+@media (min-width: 1000px) {
+  .hindex__item {
+    border-bottom: 0;
+    border-right: 1px solid var(--line);
   }
+
+  .hindex__item:last-child {
+    border-right: 0;
+  }
+}
+
+.hindex__link {
+  display: block;
+  padding: 18px 24px 18px 0;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 200ms var(--ease);
+}
+
+.hindex__link:hover {
+  opacity: 0.62;
+}
+
+.hindex__n {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+
+.hindex__title {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  letter-spacing: -0.022em;
+  line-height: 1.25;
+  max-width: 20ch;
+}
+
+.hindex__body {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  color: var(--ink-3);
+  max-width: 24ch;
 }
 
 /* --- Exposure layout ----------------------------------------------------- */
@@ -198,6 +236,12 @@
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background: var(--surface);
+}
+
+.problem__story {
+  margin-top: var(--s6);
+  padding: var(--s3) 0;
+  border-block: 1px solid var(--line);
 }
 
 /* --- Pull quote ---------------------------------------------------------- */
@@ -257,6 +301,18 @@
 
 .obs__title {
   max-width: 22ch;
+}
+
+.obs__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+}
+
+.obs__ill {
+  align-self: flex-start;
+  width: min(100%, 260px);
+  opacity: 0.92;
 }
 
 .obs__body {

@@ -1,0 +1,56 @@
+<svg viewBox="0 0 720 210" preserveAspectRatio="xMidYMid meet" fill="none" stroke-linecap="round" stroke-linejoin="round" class="ill-day">
+
+  <path class="arc" d="M60 150C170 40 550 40 660 150" stroke="var(--ill-muted, #9aabba)" stroke-width="1.2" stroke-dasharray="4 6" opacity="0.7"/>
+  <line x1="40" y1="176" x2="680" y2="176" stroke="var(--ill-muted, #9aabba)" stroke-width="1.2"/>
+
+  <g class="stage stage-1">
+    <g class="" transform="translate(96 150) scale(0.9)" stroke="var(--ill-line, #10243e)" stroke-width="1.6">
+    <circle cx="0" cy="-26" r="8.5"/>
+    <path d="M-15 0c0-9 6.7-15 15-15s15 6 15 15"/>
+  </g>
+    <g class="" transform="translate(140 136) scale(1)">
+    <rect x="-9" y="-16" width="18" height="32" rx="3.5" stroke="var(--ill-line, #10243e)" stroke-width="1.6"/>
+    <rect class="glow" x="-6" y="-12" width="12" height="21" rx="1.5" fill="var(--ill-soft, rgba(15,111,140,0.12))" stroke="none"/>
+  </g>
+    <text class="" x="118" y="198" font-size="12" font-family="inherit" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="var(--ill-muted, #9aabba)" stroke="none">MORNING</text>
+  </g>
+
+  <g class="stage stage-2">
+    <g class="" transform="translate(266 150) scale(0.9)" stroke="var(--ill-line, #10243e)" stroke-width="1.6">
+    <circle cx="0" cy="-26" r="8.5"/>
+    <path d="M-15 0c0-9 6.7-15 15-15s15 6 15 15"/>
+  </g>
+    <g class="" transform="translate(316 136) scale(1)">
+    <rect x="-24" y="-18" width="48" height="32" rx="3" stroke="var(--ill-line, #10243e)" stroke-width="1.6"/>
+    <rect class="glow" x="-20" y="-14" width="40" height="24" rx="2" fill="var(--ill-soft, rgba(15,111,140,0.12))" stroke="none"/>
+    <path d="M-31 19h62l-5-5h-52l-5 5Z" stroke="var(--ill-line, #10243e)" stroke-width="1.6"/>
+  </g>
+    <text class="" x="292" y="198" font-size="12" font-family="inherit" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="var(--ill-muted, #9aabba)" stroke="none">WORK / STUDY</text>
+  </g>
+
+  <g class="stage stage-3">
+    <g class="" transform="translate(446 150) scale(0.9)" stroke="var(--ill-line, #10243e)" stroke-width="1.6">
+    <circle cx="0" cy="-26" r="8.5"/>
+    <path d="M-15 0c0-9 6.7-15 15-15s15 6 15 15"/>
+  </g>
+    <g class="" transform="translate(490 136) scale(1)">
+    <rect x="-9" y="-16" width="18" height="32" rx="3.5" stroke="var(--ill-line, #10243e)" stroke-width="1.6"/>
+    <rect class="glow" x="-6" y="-12" width="12" height="21" rx="1.5" fill="var(--ill-soft, rgba(15,111,140,0.12))" stroke="none"/>
+  </g>
+    <text class="" x="468" y="198" font-size="12" font-family="inherit" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="var(--ill-muted, #9aabba)" stroke="none">AFTERNOON</text>
+  </g>
+
+  <g class="stage stage-4">
+    <g class="" transform="translate(600 150) scale(0.9)" stroke="var(--ill-line, #10243e)" stroke-width="1.6">
+    <circle cx="0" cy="-26" r="8.5"/>
+    <path d="M-15 0c0-9 6.7-15 15-15s15 6 15 15"/>
+  </g>
+    <g class="" transform="translate(650 136) scale(0.9)">
+    <rect x="-27" y="-17" width="54" height="34" rx="3" stroke="var(--ill-line, #10243e)" stroke-width="1.6"/>
+    <rect class="glow" x="-23" y="-13" width="46" height="26" rx="1.5" fill="var(--ill-soft, rgba(15,111,140,0.12))" stroke="none"/>
+    <path d="M-11 22h22M0 17v5" stroke="var(--ill-line, #10243e)" stroke-width="1.6"/>
+  </g>
+    <text class="" x="626" y="198" font-size="12" font-family="inherit" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="var(--ill-muted, #9aabba)" stroke="none">EVENING</text>
+  </g>
+
+</svg>

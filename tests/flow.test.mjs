@@ -91,6 +91,20 @@ const statPattern = /\b\d{1,3}\s?%|\b\d+\s+out of\s+\d+\b|\b\d{1,3},\d{3}\+?\s+(
 check('No fabricated statistics on the page', !statPattern.test(pageText),
   (pageText.match(statPattern) || [])[0]);
 
+// --------------------------------------------------- illustration system
+const ills = () => $$('.ill');
+check('Hero carries the scene illustration', !!$('#top .ill[data-ill="landing-devices"]'));
+check('Hero scene is described for screen readers', !!$('#top .ill')?.getAttribute('aria-label'));
+check('Hero index lists four sections', $$('.hindex__item').length === 4, String($$('.hindex__item').length));
+check('Hero index links resolve to real sections', $$('.hindex__link').every((a) => !!$(a.getAttribute('href'))),
+  $$('.hindex__link').map((a) => a.getAttribute('href')).filter((h) => !$(h)).join(', '));
+check('Day-story illustration present', !!$('.ill[data-ill="multi-device-day"]'));
+check('All four break-reason vignettes present', $$('#why-missed .ill').length === 4, String($$('#why-missed .ill').length));
+check('Illustrations inline real SVG', $$('.ill svg').length === ills().length, `${$$('.ill svg').length} of ${ills().length}`);
+check('No duplicate ids inside illustrations', $$('.ill [id]').length === 0, String($$('.ill [id]').length));
+check('Meaningful illustrations expose a label', ills().every((el) => el.getAttribute('aria-hidden') === 'true' || !!el.getAttribute('aria-label')));
+check('Labelled illustrations use role=img', ills().filter((el) => el.getAttribute('aria-label')).every((el) => el.getAttribute('role') === 'img'));
+
 // ---------------------------------------------------------------- open quiz
 click(byText('#research button', 'Start the research'));
 await tick();
@@ -116,6 +130,8 @@ check('Still on Q1 after failed continue', text($('.quiz__count')) === '01 / 10'
 
 answerSingle('Studying');
 check('Selection marks the card', $$('.option.is-selected').length === 1, String($$('.option.is-selected').length));
+check('Q1 shows the persona scenes', $('.qscreen__visual')?.dataset.ill === 'screen-use-personas', String($('.qscreen__visual')?.dataset.ill));
+check('Q1 visual reflects the answer', $('.qscreen__visual')?.dataset.sel === 'studying', String($('.qscreen__visual')?.dataset.sel));
 await cont();
 check('Q2 reached', text($('.quiz__count')) === '02 / 10', text($('.quiz__count')));
 
@@ -124,6 +140,8 @@ answerSingle('Smartphone');
 answerSingle('Laptop');
 check('Multi-select keeps both', $$('.option.is-selected').length === 2, String($$('.option.is-selected').length));
 
+check('Q2 shows the device family', $('.qscreen__visual')?.dataset.ill === 'device-ecosystem', String($('.qscreen__visual')?.dataset.ill));
+check('Q2 visual lights the chosen devices', $('.qscreen__visual')?.dataset.sel === 'phone laptop', String($('.qscreen__visual')?.dataset.sel));
 // Back preserves answers
 click(byText('.qnav button', 'Back'));
 await tick();
@@ -149,6 +167,7 @@ answerSingle('Tired eyes');
 check('Choosing a symptom clears the exclusive option',
   $$('.option.is-selected').length === 1 && text($('.option.is-selected')).includes('Tired eyes'),
   $$('.option.is-selected').map(text).join(' | '));
+check('Q4 visual switches to the settled state', $('.qscreen__visual')?.dataset.sel === 'tired', String($('.qscreen__visual')?.dataset.sel));
 answerSingle('Dry eyes');
 await cont();
 
@@ -158,11 +177,13 @@ await cont();
 
 check('Q6 reached', text($('.quiz__count')) === '06 / 10', text($('.quiz__count')));
 answerSingle('A reminder or notification');
+check('Q6 shows the motivation visual', $('.qscreen__visual')?.dataset.ill === 'break-motivation', String($('.qscreen__visual')?.dataset.ill));
 await cont();
 
 // Interstitial 1
 check('Break-concept interstitial appears', !!$('.qscreen--concept') && text($('.qscreen__title--concept')).includes('nudge'), text($('.qscreen__title--concept')));
 check('Interstitial marks the concept', text($('.conceptviz .marker')).toLowerCase().includes('not a medical rule'));
+check('Concept card carries the break sequence', !!$('.ill[data-ill="eye-break-notification"]'));
 click(byText('.qnav button', 'Continue'));
 await tick();
 
@@ -179,6 +200,7 @@ check('Rating required', !!$('.qnav__error'));
 click($$('.rating__point')[3]);
 await tick();
 check('Rating readout shows the label', text($('.rating__readout')).includes('Very interested'), text($('.rating__readout')));
+check('Q8 visual tracks the rating', $('.qscreen__visual')?.dataset.rating === '4', String($('.qscreen__visual')?.dataset.rating));
 await cont();
 
 // Interstitial 2
@@ -188,6 +210,7 @@ click(byText('.qnav button', 'Continue'));
 await tick();
 
 check('Q9 reached', text($('.quiz__count')) === '09 / 10', text($('.quiz__count')));
+check('Q9 shows the combined-total visual', $('.qscreen__visual')?.dataset.ill === 'multi-device-total', String($('.qscreen__visual')?.dataset.ill));
 click($$('.rating__point')[4]);
 await tick();
 await cont();
@@ -195,6 +218,7 @@ await cont();
 // Open text
 check('Q10 reached', text($('.quiz__count')) === '10 / 10', text($('.quiz__count')));
 check('Submit button is the final action', !!byText('.qnav button', 'Submit my response'));
+check('Q10 shows the reflection visual', $('.qscreen__visual')?.dataset.ill === 'habit-reflection', String($('.qscreen__visual')?.dataset.ill));
 const area = $('.textresponse__field');
 check('Text area present', !!area);
 
@@ -227,6 +251,8 @@ await tick(50);
 check('Submitting state shown', text($('.qnav button.btn--accent')).includes('Sending'), text($('.qnav button.btn--accent')));
 await tick(1200);
 check('Success screen shown', !!$('.success'), 'no .success');
+check('Success screen has the completion drawing', !!$('.ill[data-ill="survey-complete"]'));
+check('Success shows 10 / 10 complete', text($('.success__progress')) === '10 / 10 complete', text($('.success__progress')));
 check('Success copy is sincere, no counts', text($('.success')).includes('Your experience has been added to our research'));
 check('Success shows the tagline', text($('.success__tagline')).includes('AI-Powered Eye Wellness'));
 const payload = sent[sent.length - 1];

@@ -1,3 +1,4 @@
+import { Illustration } from '../common/Illustration';
 import { Wordmark } from '../common/Wordmark';
 
 interface SuccessScreenProps {
@@ -12,19 +13,9 @@ interface SuccessScreenProps {
 export function SuccessScreen({ onRestart, onClose }: SuccessScreenProps) {
   return (
     <div className="success">
-      <div className="success__mark" aria-hidden="true">
-        <svg viewBox="0 0 96 96" width="96" height="96" fill="none">
-          <circle className="success__ring" cx="48" cy="48" r="38" stroke="currentColor" strokeWidth="1.2" />
-          <path
-            className="success__tick"
-            d="M31 49.5 43 61.5 66 35"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </div>
+      <Illustration name="survey-complete" tone="dark" className="ill--complete success__mark" />
+
+      <p className="success__progress tnum">10 / 10 complete</p>
 
       <h2 className="success__title">Thank you.</h2>
       <p className="success__copy">Your experience has been added to our research.</p>

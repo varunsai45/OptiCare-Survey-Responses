@@ -1,0 +1,13 @@
+<svg viewBox="0 0 220 170" preserveAspectRatio="xMidYMid meet" fill="none" stroke-linecap="round" stroke-linejoin="round" class="ill-complete">
+
+  <circle class="ring" cx="110" cy="72" r="44" stroke="var(--ill-accent, #0f6f8c)" stroke-width="1.4"
+          stroke-dasharray="277" stroke-dashoffset="277" transform="rotate(-90 110 72)"/>
+  <path class="tick" d="M90 73l13 13 27-29" stroke="var(--ill-accent, #0f6f8c)" stroke-width="2.4"
+        stroke-dasharray="64" stroke-dashoffset="64"/>
+  <g class="eye">
+    <path d="M78 140c10.6-13 19.4-19 32-19s21.4 6 32 19c-10.6 13-19.4 19-32 19s-21.4-6-32-19Z"
+          stroke="var(--ill-accent, #0f6f8c)" stroke-width="1.4"/>
+    <circle class="pupil" cx="110" cy="140" r="6.4" fill="var(--ill-accent, #0f6f8c)" stroke="none"/>
+  </g>
+
+</svg>

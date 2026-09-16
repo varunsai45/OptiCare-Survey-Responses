@@ -1,0 +1,40 @@
+<svg viewBox="0 0 420 200" preserveAspectRatio="xMidYMid meet" fill="none" stroke-linecap="round" stroke-linejoin="round" class="ill-total">
+
+  <text class="" x="210" y="18" font-size="13" font-family="inherit" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="var(--ill-muted, #9aabba)" stroke="none">EXAMPLE</text>
+  <g class="src src-1">
+    <g class="" transform="translate(48 58) scale(0.95)">
+    <rect x="-9" y="-16" width="18" height="32" rx="3.5" stroke="var(--ill-line, #10243e)" stroke-width="1.6"/>
+    <rect class="glow" x="-6" y="-12" width="12" height="21" rx="1.5" fill="var(--ill-soft, rgba(15,111,140,0.12))" stroke="none"/>
+  </g>
+    <text class="" x="48" y="90" font-size="13" font-family="inherit" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="var(--ill-muted, #9aabba)" stroke="none">PHONE</text>
+    <text class="" x="48" y="112" font-size="14" font-family="inherit" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="var(--ill-line, #10243e)" stroke="none">3h 20m</text>
+  </g>
+  <g class="src src-2">
+    <g class="" transform="translate(210 52) scale(0.85)">
+    <rect x="-24" y="-18" width="48" height="32" rx="3" stroke="var(--ill-line, #10243e)" stroke-width="1.6"/>
+    <rect class="glow" x="-20" y="-14" width="40" height="24" rx="2" fill="var(--ill-soft, rgba(15,111,140,0.12))" stroke="none"/>
+    <path d="M-31 19h62l-5-5h-52l-5 5Z" stroke="var(--ill-line, #10243e)" stroke-width="1.6"/>
+  </g>
+    <text class="" x="210" y="90" font-size="13" font-family="inherit" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="var(--ill-muted, #9aabba)" stroke="none">LAPTOP</text>
+    <text class="" x="210" y="112" font-size="14" font-family="inherit" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="var(--ill-line, #10243e)" stroke="none">5h 10m</text>
+  </g>
+  <g class="src src-3">
+    <g class="" transform="translate(372 56) scale(0.85)">
+    <rect x="-14" y="-18" width="28" height="36" rx="3" stroke="var(--ill-line, #10243e)" stroke-width="1.6"/>
+    <rect class="glow" x="-10.5" y="-14" width="21" height="26" rx="1.5" fill="var(--ill-soft, rgba(15,111,140,0.12))" stroke="none"/>
+  </g>
+    <text class="" x="372" y="90" font-size="13" font-family="inherit" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="var(--ill-muted, #9aabba)" stroke="none">TABLET</text>
+    <text class="" x="372" y="112" font-size="14" font-family="inherit" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="var(--ill-line, #10243e)" stroke="none">1h 30m</text>
+  </g>
+  <g class="joins" stroke="var(--ill-muted, #9aabba)" stroke-width="1.2" stroke-dasharray="3 5">
+    <path d="M48 116v18h162"/>
+    <path d="M210 116v18"/>
+    <path d="M372 116v18H210"/>
+  </g>
+  <g class="total">
+    <rect x="126" y="138" width="168" height="54" rx="10" fill="var(--ill-soft, rgba(15,111,140,0.12))" stroke="var(--ill-accent, #0f6f8c)" stroke-width="1.5"/>
+    <text class="" x="210" y="157" font-size="13" font-family="inherit" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="var(--ill-muted, #9aabba)" stroke="none">COMBINED</text>
+    <text class="" x="210" y="186" font-size="24" font-family="inherit" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="var(--ill-accent, #0f6f8c)" stroke="none">10h</text>
+  </g>
+
+</svg>
